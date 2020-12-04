@@ -1,7 +1,7 @@
 import './App.css';
-import './components/header';
+import './components/Header';
 import React from "react";
-import Header from "./components/header";
+import Header from "./components/Header";
 import SearchBar from "./components/SearchBar";
 import Filter from "./components/Filters";
 import CoffeeCards from "./components/CoffeeCards";
