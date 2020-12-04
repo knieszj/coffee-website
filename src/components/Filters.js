@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import styled from "styled-components";
 
 
-const Wrapper = styled.header`
+const Wrapper = styled.div`
   background-color: white;
   display: flex;
   flex-direction: row;
@@ -14,7 +14,9 @@ const Wrapper = styled.header`
   position: sticky;
   position: -webkit-sticky;
   top: 0;
-  width: 100%;
+  border-bottom-color: black;
+  border-bottom-width: 3px;
+
 `
 const Button = styled.button`
   background-color: white;
@@ -24,8 +26,8 @@ const Button = styled.button`
   border: none;
   margin-left: 20px;
 
-  
-  &:hover{
+
+  &:hover {
     color: #cd99f5;
     cursor: pointer;
   }
@@ -43,7 +45,7 @@ class Filter extends Component {
     }
 
     render() {
-        return(
+        return (
             <Wrapper>
                 <Div>filters</Div>
                 <Button>coffee type</Button>

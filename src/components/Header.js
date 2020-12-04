@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import styled from 'styled-components'
 import americanFlagIcon from '../imagesAndIcons/Wikipedia-Flags-US-United-States-Flag.svg'
 import coffeeCupIcon from '../imagesAndIcons/svgIncons/128px-Coffee-2346113.svg.png'
+import DropdownMenu from "./ShopDropDownMenu/DropdownMenu";
 
 const SaleBanner = styled.div`
   background-color: #cd99f5;
@@ -71,7 +72,7 @@ class Header extends Component {
                 <Wrapper>
                     <Div>
                         <img src={coffeeCupIcon} height={25}/>
-                        <Button>shop</Button>
+                        <DropdownMenu buttonName={'SHOP'} styling={Button}/>
                         <Button>subscriptions</Button>
                         <Button>holiday</Button>
                         <Button>locations</Button>

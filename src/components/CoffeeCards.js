@@ -13,9 +13,9 @@ import product8 from '../imagesAndIcons/productImages/f5zzuh2xchsc7xn3mqbk.jpg'
 const Div = styled.div`
   background-color: white;
   width: 300px;
-  margin-right: 20px;
   margin-bottom: 20px;
-  box-shadow: 0 2px 2px #cc98f5;
+  margin-right: 20px;
+  box-shadow: 0 8px 7px -7px #cc98f5;
   
 `
 
@@ -27,15 +27,28 @@ const CardTitle = styled.div`
   text-transform: capitalize;
   font-family: "Segoe UI", sans-serif;
   padding: 10px;
+  
+  &:hover{
+    color: #cc98f5;
+    cursor: pointer;
+  }
 `
 
 const CardAccentText = styled(CardTitle)`
   font-style: italic;
   font-size: small;
+
+  &:hover{
+   color: black;
+    cursor: auto;
 `
 const CardWeightAndPrice = styled(CardTitle)`
   font-size: small;
   padding-bottom: 20px;
+
+  &:hover{
+    color: black;
+    cursor: auto;
 `
 
 class CoffeeCards extends Component {
