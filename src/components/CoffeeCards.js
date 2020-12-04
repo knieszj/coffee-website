@@ -14,6 +14,8 @@ class CoffeeCards extends Component {
         }
     }
 
+    //test//
+
     render() {
         return (
             <div>
