@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import styled from 'styled-components'
 import product1 from '../imagesAndIcons/productImages/a9coibyws1aj2lrjnpmb.jpg'
 import product2 from '../imagesAndIcons/productImages/b1kauy7eszfugnbxg3do.jpg'
 import product3 from '../imagesAndIcons/productImages/bbbctsi1mlpdqmcudsko.jpg'
@@ -9,17 +10,39 @@ import product7 from '../imagesAndIcons/productImages/f0zsmfnoxhfthqssuvzg.jpg'
 import product8 from '../imagesAndIcons/productImages/f5zzuh2xchsc7xn3mqbk.jpg'
 
 
-import CoffeeCardImages from "./coffeeCard/CoffeeCardImages";
-import CoffeeCardTitles from "./coffeeCard/CoffeeCardTitles";
-import AccentText from "./coffeeCard/AccentText";
-import WeightAndPrice from "./coffeeCard/WeightAndPrice";
+const Div = styled.div`
+  background-color: white;
+  width: 300px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 2px #cc98f5;
+  
+`
 
+const Img = styled.img`
+  width: 100%;
+`
+
+const CardTitle = styled.div`
+  text-transform: capitalize;
+  font-family: "Segoe UI", sans-serif;
+  padding: 10px;
+`
+
+const CardAccentText = styled(CardTitle)`
+  font-style: italic;
+  font-size: small;
+`
+const CardWeightAndPrice = styled(CardTitle)`
+  font-size: small;
+  padding-bottom: 20px;
+`
 
 class CoffeeCards extends Component {
     constructor(props) {
         super(props);
 
-        this.state ={
+        this.state = {
             card: [
                 {
                     image: product1,
@@ -73,27 +96,22 @@ class CoffeeCards extends Component {
         }
     }
 
-    //test//
 
     render() {
         return (
-            <div>
-                {this.state.card.map(card =>{
+            <>
+                {this.state.card.map(card => {
                     return (
-                    <>
-                        <img src={card.image}/>
-                        <div>{card.title}</div>
-                        <div>{card.accentText}</div>
-                        <div>{card.weightAndPrice}</div>
-                  </>
-                )
+                        <Div>
+                            <Img src={card.image}/>
+                            <CardTitle>{card.title}</CardTitle>
+                            <CardAccentText>{card.accentText}</CardAccentText>
+                            <CardWeightAndPrice>{card.weightAndPrice}</CardWeightAndPrice>
+                        </Div>
+                    )
                 })}
 
-                {/*<CoffeeCardImages/>*/}
-                {/*<CoffeeCardTitles/>*/}
-                {/*<AccentText/>*/}
-                {/*<WeightAndPrice/>*/}
-            </div>
+            </>
         )
     }
 }

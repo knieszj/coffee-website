@@ -8,6 +8,7 @@ import CoffeeCards from "./components/CoffeeCards";
 import SupportLocalFarmers from "./components/SupportLocalFarmers";
 import CoffeeQuiz from "./components/CoffeeQuiz";
 import FooterAndMore from "./components/FooterAndMore";
+import CoffeeWrapper from "./components/CoffeeWrapper";
 
 function App() {
     return (
@@ -15,7 +16,9 @@ function App() {
             <Header/>
             <SearchBar/>
             <Filter/>
-            <CoffeeCards/>
+            <CoffeeWrapper>
+                <CoffeeCards/>
+            </CoffeeWrapper>
             <SupportLocalFarmers/>
             <CoffeeQuiz/>
             <FooterAndMore/>
