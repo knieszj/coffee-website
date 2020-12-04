@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import styled from 'styled-components'
 import americanFlagIcon from '../imagesAndIcons/Wikipedia-Flags-US-United-States-Flag.svg'
+import coffeeCupIcon from '../imagesAndIcons/svgIncons/128px-Coffee-2346113.svg.png'
 
 const SaleBanner = styled.div`
   background-color: #cd99f5;
@@ -21,6 +22,7 @@ const Wrapper = styled.header`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   padding-top: 10px;
   padding-bottom: 10px;
   margin-left: 50px;
@@ -32,6 +34,7 @@ const Button = styled.button`
   text-transform: uppercase;
   padding: 10px;
   border: none;
+  margin-left: 20px;
 
   
   &:hover{
@@ -43,7 +46,15 @@ const SubscribeButton = styled(Button)`
 color: #cd99f5
 `
 
+const Div = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+    
+`
+
 const youTubeLink = `https://www.youtube.com/watch?v=oHg5SJYRHA0`
+
 
 
 class Header extends Component {
@@ -58,14 +69,14 @@ class Header extends Component {
                     Our Winter Blooms holiday collection is here. <span> <Anchor href={youTubeLink}> Shop Now</Anchor></span>
                 </SaleBanner>
                 <Wrapper>
-                    <div>
-                        <img/>
+                    <Div>
+                        <img src={coffeeCupIcon} height={25}/>
                         <Button>shop</Button>
                         <Button>subscriptions</Button>
                         <Button>holiday</Button>
                         <Button>locations</Button>
                         <Button>learn</Button>
-                    </div>
+                    </Div>
                     <div>
                         <SubscribeButton>subscribe</SubscribeButton>
                         <Button>sign in</Button>

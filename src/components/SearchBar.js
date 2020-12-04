@@ -9,6 +9,7 @@ const Wrapper = styled.header`
   justify-content: space-around;
   padding-top: 10px;
   padding-bottom: 10px;
+  margin-bottom: 25px;
 
 `
 const Button = styled.button`
