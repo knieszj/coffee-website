@@ -11,6 +11,10 @@ import coffeeCupIcon from '../imagesAndIcons/svgIncons/128px-Coffee-2346113.svg.
 import DropdownMenu from "./HeaderNavBarComponents/ShopDropDownMenu/DropdownMenu";
 import HomePage from "./HomePage";
 import ShopCoffeePage from "./ShopDropDownComponents/CoffeePageComponents/ShopCoffeePage";
+import Subscriptions from "./HeaderNavBarComponents/Subscriptions";
+import Holiday from "./HeaderNavBarComponents/Holiday";
+import Locations from "./HeaderNavBarComponents/Locations";
+import Learn from "./HeaderNavBarComponents/Learn";
 
 // import SearchBar from "./components/SearchBar";
 // import Filter from "./components/Filters";
@@ -93,10 +97,27 @@ class HeaderNavBar extends Component {
                             <Link to={'/Coffee'}>
                                 <DropdownMenu buttonName={'SHOP'} styling={Button}/>
                             </Link>
-                            <Button>subscriptions</Button>
-                            <Button>holiday</Button>
-                            <Button>locations</Button>
-                            <Button>learn</Button>
+                            <Button>
+                                <Link to={'/Subscriptions'}>
+                                    subscriptions
+                                </Link>
+                            </Button>
+                            <Button>
+                                <Link to={'/Holiday'}>
+                                    holiday
+                                </Link>
+                            </Button>
+
+                            <Button>
+                                <Link to={'/Locations'}>
+                                    locations
+                                </Link>
+                            </Button>
+                            <Button>
+                                <Link to={'/Learn'}>
+                                    learn
+                                </Link>
+                            </Button>
                         </Div>
                         <div>
                             <SubscribeButton>subscribe</SubscribeButton>
@@ -112,6 +133,18 @@ class HeaderNavBar extends Component {
                         </Route>
                         <Route path={'/Coffee'}>
                             <ShopCoffeePage/>
+                        </Route>
+                        <Route path={'/Subscriptions'}>
+                            <Subscriptions/>
+                        </Route>
+                        <Route path={'/Holiday'}>
+                            <Holiday/>
+                        </Route>
+                        <Route path={'/Locations'}>
+                            <Locations/>
+                        </Route>
+                        <Route path={'/Learn'}>
+                            <Learn/>
                         </Route>
                     </Switch>
 
