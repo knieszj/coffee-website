@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {Switch, Link, Route, useRouteMatch} from 'react-router-dom'
+import {Switch, Link, Route, useRouteMatch, BrowserRouter as Router} from 'react-router-dom'
 import styled from 'styled-components'
 import IndividualItem from "../../IndividualItem";
 
@@ -58,25 +58,35 @@ const CoffeeCards = ({cards}) => {
     })
 
 
-
-
     return (
         <>
-            <div>
-                {cardList.length > 0 ?
-                    cardList
-                    :
-                    <p>
-                        Kein mehr koffee
-                    </p>
-                }
-            </div>
-            <Switch>
-                <Route path={`${match.url}/:cardsId`}>
-                    <IndividualItem data={cards}/>
-                </Route>
-            </Switch>
-
+            <Router>
+                {/*<div>*/}
+                {/*    {cardList.length > 0 ?*/}
+                {/*        cardList*/}
+                {/*        :*/}
+                {/*        <p>*/}
+                {/*            Kein mehr koffee*/}
+                {/*        </p>*/}
+                {/*    }*/}
+                {/*</div>*/}
+                <Switch>
+                    <Route path={`${match.url}/:cardsId`}>
+                        <IndividualItem data={cards}/>
+                    </Route>
+                    <Route>
+                        <div>
+                            {cardList.length > 0 ?
+                                cardList
+                                :
+                                <p>
+                                    Kein mehr koffee
+                                </p>
+                            }
+                        </div>
+                    </Route>
+                </Switch>
+            </Router>
         </>
     )
 // }
