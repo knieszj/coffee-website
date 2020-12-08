@@ -1,0 +1,52 @@
+.navigationBar {
+    background-color: white;
+    font-family: "Segoe UI", sans-serif;
+    font-size: small;
+
+    text-transform: uppercase;
+    padding: 10px;
+    border: none;
+    margin-left: 20px;
+}
+
+.navigationBar:hover {
+
+
+}
+
+.navigationBar:hover .subMenu{display: flex}
+
+
+.subMenu{
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    background-color: white;
+    z-index: 1;
+    height: max-content;
+    list-style-type: none;
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+
+.listItem{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: "Segoe UI", sans-serif;
+}
+
+.listItem:hover{
+    color: #cd99f5;
+    cursor: pointer;
+
+}
+
+.horizontalRule{
+    border: 1px solid #cd99f5;
+}
+
+.hrDiv{
+    width: 100%;
+}

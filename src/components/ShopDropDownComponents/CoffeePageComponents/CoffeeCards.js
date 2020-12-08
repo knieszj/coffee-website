@@ -1,13 +1,13 @@
 import React, {Component} from 'react'
 import styled from 'styled-components'
-import product1 from '../imagesAndIcons/productImages/a9coibyws1aj2lrjnpmb.jpg'
-import product2 from '../imagesAndIcons/productImages/b1kauy7eszfugnbxg3do.jpg'
-import product3 from '../imagesAndIcons/productImages/bbbctsi1mlpdqmcudsko.jpg'
-import product4 from '../imagesAndIcons/productImages/dhctmchpaf6eulkygjue.jpg'
-import product5 from '../imagesAndIcons/productImages/e7wlxvaqj9p3jb52zuco.jpg'
-import product6 from '../imagesAndIcons/productImages/eogyc9spkbgqkmsnrwwg.jpg'
-import product7 from '../imagesAndIcons/productImages/f0zsmfnoxhfthqssuvzg.jpg'
-import product8 from '../imagesAndIcons/productImages/f5zzuh2xchsc7xn3mqbk.jpg'
+import product1 from '../../../imagesAndIcons/productImages/a9coibyws1aj2lrjnpmb.jpg'
+import product2 from '../../../imagesAndIcons/productImages/b1kauy7eszfugnbxg3do.jpg'
+import product3 from '../../../imagesAndIcons/productImages/bbbctsi1mlpdqmcudsko.jpg'
+import product4 from '../../../imagesAndIcons/productImages/dhctmchpaf6eulkygjue.jpg'
+import product5 from '../../../imagesAndIcons/productImages/e7wlxvaqj9p3jb52zuco.jpg'
+import product6 from '../../../imagesAndIcons/productImages/eogyc9spkbgqkmsnrwwg.jpg'
+import product7 from '../../../imagesAndIcons/productImages/f0zsmfnoxhfthqssuvzg.jpg'
+import product8 from '../../../imagesAndIcons/productImages/f5zzuh2xchsc7xn3mqbk.jpg'
 
 
 const Div = styled.div`
@@ -18,11 +18,9 @@ const Div = styled.div`
   box-shadow: 0 8px 7px -7px #cc98f5;
   
 `
-
 const Img = styled.img`
   width: 100%;
 `
-
 const CardTitle = styled.div`
   text-transform: capitalize;
   font-family: "Segoe UI", sans-serif;
@@ -33,7 +31,6 @@ const CardTitle = styled.div`
     cursor: pointer;
   }
 `
-
 const CardAccentText = styled(CardTitle)`
   font-style: italic;
   font-size: small;
